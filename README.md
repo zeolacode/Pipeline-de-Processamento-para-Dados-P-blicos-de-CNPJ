@@ -1,8 +1,39 @@
 <h1 align="center"> Pipeline de Processamento para Dados Públicos de CNPJ </h1>
 
-![Pipeline](https://user-images.githubusercontent.com/96552968/159188707-f9ec21c9-885d-42e0-9b1e-2f3bfc475123.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/96552968/159188707-f9ec21c9-885d-42e0-9b1e-2f3bfc475123.png" width="750" height="500" >
+</p>
 
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
+
+## Índice 
+
+* [Índice](#índice)
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
+* [Acesso ao Projeto](#acesso-ao-projeto)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Pessoas Contribuidoras](#pessoas-contribuidoras)
+* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
+* [Licença](#licença)
+* [Conclusão](#conclusão)
+
+## Descrição do Projeto
+
+   Neste projeto, foi construído um pipeline em python que realiza o download, processamento e inserção de um conjunto de dados em um Database (MySQL) automaticamente. Os dados são extraídos de um site do governo federal (https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj). São dados de empresas, estabelecimentos e sócios. Podemos observar, na próxima imagem, a estrutura deste projeto! 
+  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/96552968/159190254-287f4918-8c81-4f14-83a0-f104f85d6917.png" width="550" height="300" >
+</p>
+
+### Descrição das etapas do projeto: 
+  
+  - RAW: Nesta etapa é realizado o download de arquivos brutos do servidor do governo federal. Estes, são salvos em uma pasta chamada /Raw, que o próprio pipeline cria. 
+  - Standardized: Na segunda etapa, os arquivos são descompactados e salvados como .csv em uma outra pasta que o próprio pipeline cria, chamada /Standardized.
+  - Conformed: Na terceira etapa, os dados são carregados em objetos DataFrame (pandas) e processados. Os dados são padronizados em text e datetime. Além disso, as colunas das tabelas são nomeadas.    
+  - Aplicação: Na última etapa, os dados processados são inseridos em um banco de dados (MySQL) 
+  
+    
 
