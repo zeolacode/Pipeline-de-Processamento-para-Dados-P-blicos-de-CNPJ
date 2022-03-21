@@ -15,10 +15,8 @@
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
 * [Acesso ao Projeto](#acesso-ao-projeto)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
-* [Pessoas Contribuidoras](#pessoas-contribuidoras)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-* [Licença](#licença)
-* [Conclusão](#conclusão)
+* [Pessoa Desenvolvedora do Projeto](#pessoas-desenvolvedoras)
+
 
 ## Descrição do Projeto
 
@@ -61,3 +59,11 @@
    - Obs: Não esquecer de modificar as configurações da conexão com o MySQL no arquivo `pipeline.py` (também criar o database)!!
    - Rodando a aplicação:  
       - `python pipeline.py`
+
+## Tecnologias utilizadas
+   - `Python`
+   - `MySQL`
+
+## Pessoa Desenvolvedora do Projeto
+   - Pedro Zeola Lopes
+ 
