@@ -157,15 +157,15 @@ def processing_to_mysql():
       # Transformando dados no tipo Data
       df.loc[df['data_situacao_cadastral'] == '00000000', 'data_situacao_cadastral'] = None
       df.loc[df['data_situacao_cadastral'] == '0', 'data_situacao_cadastral'] = None
-      df['data_situacao_cadastral'] = pd.to_datetime(df['data_situacao_cadastral'], format='%Y%m%d', errors='coerce')
+      df['data_situacao_cadastral'] = pd.to_datetime(df['data_situacao_cadastral'], format='%Y%m%d', errors='coerce').dt.date
 
       df.loc[df['data_inicio_atividade'] == '00000000', 'data_inicio_atividade'] = None
       df.loc[df['data_inicio_atividade'] == '0', 'data_inicio_atividade'] = None
-      df['data_inicio_atividade'] = pd.to_datetime(df['data_inicio_atividade'], format='%Y%m%d', errors='coerce') 
+      df['data_inicio_atividade'] = pd.to_datetime(df['data_inicio_atividade'], format='%Y%m%d', errors='coerce').dt.date 
 
       df.loc[df['data_situacao_especial'] == '00000000', 'data_situacao_especial'] = None
       df.loc[df['data_situacao_especial'] == '0', 'data_situacao_especial'] = None
-      df['data_situacao_especial'] = pd.to_datetime(df['data_situacao_especial'], format='%Y%m%d', errors='coerce')
+      df['data_situacao_especial'] = pd.to_datetime(df['data_situacao_especial'], format='%Y%m%d', errors='coerce').dt.date
       
       # Incerindo dados no MySQL
       df.to_sql('estabelecimentos', engine, if_exists='append', index=False, chunksize=50000)
@@ -179,7 +179,7 @@ def processing_to_mysql():
       # Transformando dados no tipo Data
       df.loc[df['data_entrada'] == '00000000', 'data_entrada'] = None
       df.loc[df['data_entrada'] == '0', 'data_entrada'] = None
-      df['data_entrada'] = pd.to_datetime(df['data_entrada'], format='%Y%m%d', errors='coerce')
+      df['data_entrada'] = pd.to_datetime(df['data_entrada'], format='%Y%m%d', errors='coerce').dt.date
 
       # Incerindo dados no MySQL
       df.to_sql('socios', engine, if_exists='append', index=False, chunksize=50000)
