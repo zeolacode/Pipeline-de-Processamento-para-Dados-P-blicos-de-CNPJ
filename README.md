@@ -57,6 +57,14 @@
       - `pip install sqlalchemy`
       - `pip install PyMySQL`
    - Obs: Não esquecer de modificar as configurações da conexão com o MySQL no arquivo `pipeline.py` (também criar o database)!!
+      - Nome das variáveis para modificação:
+      - `database`
+      - `usuario_db`
+      - `senha_db`
+   - Obs: A base de dados disponibilizada pelo governo, está particionada em 10 blocos! Você pode modificar o número de partições para que o pipeline realize o          processo com mais dados (por default o pipeline está realizando o processo, somente com a primeira partição)! Basta modificar as variáveis:
+      - `url_empresa`
+      - `url_estabelecimento`
+      - `url_socio`
    - Rodando a aplicação:  
       - `python pipeline.py`
 
