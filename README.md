@@ -20,7 +20,7 @@
 
 ## Descrição do Projeto
 
-   Neste projeto, foi construído um pipeline em python que realiza o download, processamento e inserção de um conjunto de dados em um Database (MySQL) automaticamente. Os dados são extraídos de um site do governo federal (https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj). São dados de empresas, estabelecimentos e sócios. Podemos observar, na próxima imagem, a estrutura deste projeto! 
+   Neste projeto, foi construído um pipeline em python que realiza o download, processamento e inserção de um conjunto de dados em um Database (MySQL) automaticamente. Os dados são extraídos de um site do governo federal (https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj). São dados de `empresas`, `estabelecimentos` e `sócios`. Podemos observar, na próxima imagem, a estrutura deste projeto! 
   
 <p align="center">
 <img src="https://user-images.githubusercontent.com/96552968/159190254-287f4918-8c81-4f14-83a0-f104f85d6917.png" width="550" height="300" >
@@ -61,7 +61,7 @@
       - `database`
       - `usuario_db`
       - `senha_db`
-   - Obs: A base de dados disponibilizada pelo governo, está particionada em 10 blocos! Você pode modificar o número de partições para que o pipeline realize o          processo com mais dados (por default o pipeline está realizando o processo, somente com a primeira partição)! Basta modificar as variáveis:
+   - Obs: A base de dados disponibilizada pelo governo, está particionada em 10 blocos! Você pode modificar o número de partições para que o pipeline realize o          processo com mais dados (por default o pipeline está realizando o processo, somente com a primeira partição)! Basta modificar as variáveis para relizar o download de mais partições `1 -> 10`:
       - `url_empresa`
       - `url_estabelecimento`
       - `url_socio`
