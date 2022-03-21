@@ -42,3 +42,22 @@
 </p>
 
 ## Acesso ao Projeto
+### Dicas para rodar o projeto: 
+   - Abrir o cmd, navegar até uma pasta local de projetos:
+      - `mkdir projeto-pipeline-Cnpj`
+      - `cd projeto-pipeline-Cnpj`
+   - Se for o caso, crie um ambiente virtual:
+      - `python -m venv base`
+      - `base\Scripts\activate.bat`
+   - Clone o repositório: 
+      - `git clone https://github.com/zeolacode/Pipeline-de-Processamento-para-Dados-Publicos-de-CNPJ.git`
+      - `cd Pipeline-de-Processamento-para-Dados-Publicos-de-CNPJ`
+   - Pacotes necessários para rodar o código (instalar!):
+      - `pip install tqdm`
+      - `pip install requests`
+      - `pip install pandas`
+      - `pip install sqlalchemy`
+      - `pip install PyMySQL`
+   - Obs: Não esquecer de modificar as configurações da conexão com o MySQL no arquivo `pipeline.py` (também criar o database)!!
+   - Rodando a aplicação:  
+      - `python pipeline.py`
