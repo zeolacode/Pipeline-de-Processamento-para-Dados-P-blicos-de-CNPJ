@@ -71,6 +71,7 @@
 ## Tecnologias utilizadas
    - `Python`
    - `MySQL`
+   - `VS Code`
 
 ## Pessoa Desenvolvedora do Projeto
    - Pedro Zeola Lopes
