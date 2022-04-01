@@ -49,13 +49,9 @@
       - `base\Scripts\activate.bat`
    - Clone o repositório: 
       - `git clone https://github.com/zeolacode/Pipeline-de-Processamento-para-Dados-Publicos-de-CNPJ.git`
-      - `cd Pipeline-de-Processamento-para-Dados-Publicos-de-CNPJ`
    - Pacotes necessários para rodar o código (instalar!):
-      - `pip install tqdm`
-      - `pip install requests`
-      - `pip install pandas`
-      - `pip install sqlalchemy`
-      - `pip install PyMySQL`
+      - `cd Pipeline-de-Processamento-para-Dados-Publicos-de-CNPJ`
+      - `pip install -r requirements.txt`
    - Obs: Não esquecer de modificar as configurações da conexão com o MySQL no arquivo `pipeline.py` (também criar o database)!!
       - Nome das variáveis para modificação:
       - `database`
